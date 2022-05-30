@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,900&display=swap');
+
+:root{
+    --color-text: rgb(221, 211, 211);
+    --color-p: rgb(201, 201, 201);
+    --color-button: rgb(204, 101, 101);
+
+    
+}
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Roboto;
+    
+}
+
+.banner{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                  url("./assets/bg1.jpg");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.banner .content{
+    text-align: center;
+    max-width: 1000px;
+}
+
+.banner .content h2{
+    font-size: 4em;
+    color: var(--color-text);
+}
+
+.banner .content p{
+    font-size: 1.2em;
+    color: var(--color-p);
+    /* margin-bottom: 20px; */
+}
+
+.banner .content .btn {
+    display: inline-block;
+    font-size: 1em;
+    background: var(--color-button);
+    padding: 15px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.banner .content .btn:hover{
+    letter-spacing: 5px;
+}
