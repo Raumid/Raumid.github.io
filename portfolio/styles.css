@@ -13,7 +13,11 @@
     padding: 0%;
     box-sizing: border-box;
     font-family: Roboto;
-    
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 1000px;
 }
 
 .banner{
@@ -63,55 +67,116 @@
 }
 
 header{
+    z-index: 10000;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
-    z-index: 10000;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
     transition: 0.5s;
 }
 
 .sticky{
     background: #fff;
-    padding: 10px 100px;
-    box-shadow: 0 5px 20px;
+    padding: 10px 20px;
 }
 
 header .logo{
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 2em;
     color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 900;
 }
 
 .sticky .logo{
     color: #000;
 }
 
-header .logo span{
-    color: red;
+header .logo span {
+    color: var(--color-button);
 }
 
 header .navigation{
     position: relative;
     display: flex;
-    align-items:center;
-}
-
 header .navigation li{
+=======
+
+header .navigation li {
+>>>>>>> 4ab3b83511f1d4e5e19c7828b6d8eb03c463428b
     list-style: none;
     margin-left: 30px;
 }
 
-header .navigation li a {
+header .navigation li a{
     text-decoration: none;
     color: #fff;
     font-weight: 300;
 }
 
-.sticky .navigation li a {
-    color: #000;
+header .navigation li a:hover{
+    color: var(--color-button);
+}
+
+.sticky .navigation li a{
+    color: #000
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 50px;
+}
+
+.about .row{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .row .col50 {
+    width: 48%;
+    position: relative;
+}
+
+.titleText{
+    color: #222;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.titleText span{
+    color: var(--color-button);
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.row .col50 .imgbx{
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.row .col50 .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects{
+    padding: 50px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
