@@ -61,3 +61,57 @@
 .banner .content .btn:hover{
     letter-spacing: 5px;
 }
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.sticky{
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px;
+}
+
+header .logo{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 2em;
+    color: #fff;
+}
+
+.sticky .logo{
+    color: #000;
+}
+
+header .logo span{
+    color: red;
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+    align-items:center;
+}
+
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+.sticky .navigation li a {
+    color: #000;
+}
