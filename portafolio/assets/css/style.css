@@ -370,21 +370,59 @@ min-width: 40px;
     }
 
     .toggle {
+        /* background: url(../img//menu.png); */
+        /* background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px; */
+        position: relative;
         width: 40px;
         height: 40px;
-        background: url(../img//menu.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 30px;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        /* box-shadow: rgba(0, 0, 0, 0.1); */
     }
 
-    .toggle.active {
-        background: url(../img//close.png);
-        background-position: center;
+    .toggle span {
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background: #fff;
+        border-radius: 4px;
+        transition: 0.5s;
+    }
+
+    .toggle span:nth-child(1) {
+        transform: translateY(-15px);
+        width: 23px;
+        left: 6px;
+    }
+
+    .toggle.active span:nth-child(1) {
+        width: 40px;
+        transform: translateY(0) rotate(45deg);
+    }
+
+    .toggle span:nth-child(2) {
+        transform: translateY(15px);
+        width: 15px;
+        left: 6px;
+    }
+
+    .toggle.active span:nth-child(2) {
+        width: 40px;
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    .toggle.active span:nth-child(3){
+        /* background: url(../img//close.png); */
+        /* background-position: center;
         background-repeat: no-repeat;
-        background-size: 25px;
-        cursor: pointer;
+        background-size: 25px; */
+        /* cursor: pointer; */
+        transform: translateX(60px);
     }
 
     header.sticky .toggle {
