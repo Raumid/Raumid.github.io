@@ -7,30 +7,33 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>Raumid Portfolio</title>
 </head>
 <body>
     <header>
         <a href="#" class="logo">Portafolio</a>
-        <div class="toogle"></div>
-        <ul>
-            <li><a href="#">Inicion</a></li>
-            <li><a href="#">Sobre mi</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Trabajo</a></li>
-            <li><a href="#">Testimonios</a></li>
-            <li><a href="#">Contacto</a></li>
+        <div class="toggle" onClick="toggleMenu()"></div>
+        <ul class="menu">
+            <li><a href="#home" onClick="toggleMenu()">Inicion</a></li>
+            <li><a href="#about" onClick="toggleMenu()">Sobre mi</a></li>
+            <li><a href="#services" onClick="toggleMenu()">Servicios</a></li>
+            <li><a href="#work" onClick="toggleMenu()">Trabajo</a></li>
+            <li><a href="#testimonial" onClick="toggleMenu()">Testimonios</a></li>
+            <li><a href="#contact" onClick="toggleMenu()">Contacto</a></li>
         </ul>
     </header>
-    <section class="banner">
+
+    <section class="banner" id="home">
         <div class="text-box">
             <h2>Hola, mi nombre es <br> <span>Raumid de Jesus.</span></h2>
             <h3>Soy Desarrollador Web</h3>
-            <a href="#" class="btn">Sobre mi</a>
+            <a href="#about" class="btn">Sobre mi</a>
         </div>
     </section>
-    <section class="about">
+
+    <section class="about" id="about">
         <div class="heading">
             <h2>Sobre Mi</h2>
         </div>
@@ -48,7 +51,8 @@
             </div>
         </div>
     </section>
-    <section class="services">
+
+    <section class="services" id="services">
         <div class="heading white">
             <h2>Mis servicios</h2>
             <p>Anuthign</p>
@@ -68,50 +72,111 @@
             <div class="services-box">
                 <img src="./assets/img/icon3.png">
                 <h2>Desarrollo Movil</h2>
-                <p>Applicaciones para celular, con despliegue a la playstore</p>
+                <p>Aplicaciones para celular, con despliegue a la playstore</p>
             </div>
-            <!-- <div class="services-box">
-                <img src="./assets/img/icon4.png">
-                <h2>Photografi</h2>
-            </div>
-            <div class="services-box">
-                <img src="./assets/img/icon5.png">
-                <h2>Content Writing</h2>
-            </div>
-            <div class="services-box">
-                <img src="./assets/img/icon6.png">
-                <h2>Video Editing</h2>
-            </div> -->
         </div>
     </section>
 
-    <section class="work">
+    <section class="work" id="work">
         <div class="heading">
             <h2>Mi trabajo</h2>
             <p>Anuthign</p>
-            
-            <div class="content">
-                <div class="work-box">
-                    <img src="./assets/img/product1.jpg" alt="">
-                </div>
+        </div>
 
-                <div class="work-box">
-                    <img src="./assets/img/product2.jpg" alt="">
-                </div>
+        <div class="content">
+            <div class="work-box">
+                <img src="./assets/img/product1.jpg" alt="">
+            </div>
 
-                <div class="work-box">
-                    <img src="./assets/img/product3.jpg" alt="">
-                </div>
+            <div class="work-box">
+                <img src="./assets/img/product2.jpg" alt="">
+            </div>
 
-                <div class="work-box">
-                    <img src="./assets/img/product4.jpg" alt="">
-                </div>
+            <div class="work-box">
+                <img src="./assets/img/product3.jpg" alt="">
+            </div>
+
+            <div class="work-box">
+                <img src="./assets/img/product4.jpg" alt="">
             </div>
         </div>
         <div class="heading">
             <a href="#" class="btn">Ver mas</a>
         </div>
     </section>
+
+    <section class="testimonial" id="testimonial">
+        <div class="heading">
+            <h2>Testimonios</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing 
+                elit. Asperiores totam repudiandae error optio accusamus ratione maxime nisi quis omnis perferendis. Ad ipsa alias voluptate numquam sequi quia reprehenderit dolor nemo!</p>
+        </div>
+
+        <div class="content">
+            <div class="testimonial-box">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatem facilis eaque, eligendi magnam numquam facere corrupti delectus fuga hic recusandae! 
+                    Porro aperiam tenetur placeat, similique aliquid consequuntur voluptates! Amet!
+                </p>
+                <h3>SomeOne Famous<br><span>Diseño Creativo</span></h3>
+            </div>
+            <div class="testimonial-box">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatem facilis eaque, eligendi magnam numquam facere corrupti delectus fuga hic recusandae! 
+                    Porro aperiam tenetur placeat, similique aliquid consequuntur voluptates! Amet!
+                </p>
+                <h3>SomeOne Famous<br><span>Diseño Creativo</span></h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing 
+                elit. Asperiores totam repudiandae error optio accusamus ratione maxime nisi quis omnis perferendis. Ad ipsa alias voluptate numquam sequi quia reprehenderit dolor nemo!</p>
+        </div>
+
+        <div class="content">
+            <div class="contact-info">
+                <h3>Informacion De Contacto</h3>
+                <div class="contact-info-box">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Telefono</h3>
+                            <p>81 XX XX XX XX</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Correo</h3>
+                            <p>raumid98@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-box">
+                <form>
+                    <h3> Comentarios</h3> 
+
+                    <input type="text" name="" placeholder="Nombre Completo">
+                    <input type="email" name="" placeholder="Correo Electronico">
+                    <textarea placeholder="Tu mensaje"></textarea>
+                    <input type="submit" value="send">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <p>Copyright 2023 Raumid. Todos los derechos Reservados.</p>
+    </div>
 
     <script type="text/javascript" src="./assets/js/index.js"> </script>
 </body>
