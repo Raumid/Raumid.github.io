@@ -102,11 +102,9 @@ header .logo span {
 header .navigation{
     position: relative;
     display: flex;
-header .navigation li{
-=======
+}
 
 header .navigation li {
->>>>>>> 4ab3b83511f1d4e5e19c7828b6d8eb03c463428b
     list-style: none;
     margin-left: 30px;
 }
