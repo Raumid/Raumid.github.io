@@ -3,6 +3,14 @@
 :root {
     --color-primary-btn:#2196f3;
     --delay-menu-toggle: 0.5s;
+
+    --size-btn-wsp: 70px;
+    --right-btn-wsp: 50px;
+    --bootom-btn-wsp: 50px;
+
+    --size-btn-wsp-sm: 60px;
+    --right-btn-wsp-sm: 25px;
+    --bootom-btn-wsp-sm: 45px;
 }
 
 * {
@@ -112,8 +120,17 @@ header ul li a {
     text-decoration: none;
 }
 
+header ul li a:hover {
+    /* background-color: #000;
+    color: #fff; */
+}
+
 header.sticky ul li a {
     color: #111;
+}
+
+header.sticky ul li a:hover {
+    
 }
 
 .indicator {
@@ -342,6 +359,38 @@ min-width: 40px;
    padding: 10px; 
 }
 
+.action {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background: greenyellow;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.btn-wsp {
+    position: fixed;
+    bottom: var(--bootom-btn-wsp);
+    right: var(--right-btn-wsp);
+    width: var(--size-btn-wsp);
+    height: var(--size-btn-wsp);
+    line-height: var(--size-btn-wsp);
+    font-size: calc(var(--size-btn-wsp) - 20px);
+    background:#25d366;
+    color:#FFF;
+    text-align:center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+
+.btn-wsp:hover {
+    background: #20ba5a;
+}
+
 /* responsive */
 
 @media (max-width: 991px)
@@ -515,5 +564,14 @@ min-width: 40px;
 
     section {
         padding: 100px 20px;
+    }
+
+    .btn-wsp {
+        bottom: var(--bootom-btn-wsp-sm);
+        right: var(--right-btn-wsp-sm);
+        width: var(--size-btn-wsp-sm);
+        height: var(--size-btn-wsp-sm);
+        line-height: var(--size-btn-wsp-sm);
+        font-size: calc(var(--size-btn-wsp-sm) - 20px);
     }
 }
