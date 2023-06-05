@@ -2,6 +2,7 @@
 
 :root {
     --color-primary-btn:#2196f3;
+    --color-primary-hover: #2195f322;
     --delay-menu-toggle: 0.5s;
 
     --size-btn-wsp: 70px;
@@ -223,10 +224,58 @@ img {
 .work .content .work-box {
     width:50% ;
     padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work .content:hover .work-box .work-box-body {
+    right: 0%;
 }
 
 .work .content .work-box img {
     max-width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.work-box-body {
+    transition: 1s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: -100%;
+    padding: 40px;
+    color: #fff;
+    backdrop-filter: blur(5px);
+    background: #00000023;
+    border-radius: 20px;
+}
+
+.work-box-body:hover { right: 0%;}
+
+.title-box {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.subtitle-box {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.info-card-box {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 40px 0;
+    font-weight: 400;
 }
 
 .testimonial {
