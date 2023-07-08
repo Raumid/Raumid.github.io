@@ -68,6 +68,11 @@ section {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
 }
 
 header {
@@ -454,6 +459,7 @@ min-width: 40px;
 
 .btn-wsp:hover {
     background: #20ba5a;
+    transform: translateY(-5px);
 }
 
 /* responsive */

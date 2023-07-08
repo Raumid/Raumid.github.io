@@ -9,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <title>Raumid Portfolio</title>
 </head>
 
 <body>
     <header>
-        <a href="#" class="logo">Portafolio</a>
+        <a href="#" class="logo">Raumid</a>
         <div class="toggle" onClick="toggleMenu()">
             <span></span>
             <span></span>
@@ -35,30 +36,31 @@
 
     <section class="banner" id="home">
         <div class="text-box">
-            <h2>Hola, mi nombre es 
+            <h2 class="rv-title">Hola, mi nombre es 
                 <br> 
                 <span>Raumid de Jesus.</span>
             </h2>
-            <h3>Soy Desarrollador Web</h3>
+            <h3 class="rv-subtitle">Soy Desarrollador Web</h3>
             <a href="#about" class="btn">Sobre mi</a>
         </div>
     </section>
 
     <section class="about" id="about">
         <div class="heading">
-            <h2>Sobre Mi</h2>
+            <h2 class="rv-title">Sobre Mi</h2>
         </div>
         <div class="content">
-            <div class="content-box w50">
+            <div class="content-box w50 rv-box-left">
                 <h3>Soy desarrollador Web.</h3>
-                <p>Soy ingeniero Mecatronico con mas de 3 años de experiencia enfocado
-                    en el desarrollo web, he trabajado haciendo e-commerce, CMS, Puntos de venta,
-                    Facturacion Electronica, pasarela de pagos, Biometricos,
-                    Inteligencia Artificial entre otros.
+                <p>
+                    Soy un ingeniero Mecatrónico enfocado al desarrollo de Software, he trabajado haciendo múltiples proyectos como
+                    E-Commerce, CMS, Puntos de Venta, Integración de Dispositivos Biométricos, Facturación Electrónica, Integraciones con pasarelas de Pagos e Inteligencia Artificial.
+
+                    Soy un apasionado sobre la tecnología y comprometido a mi labor como Desarrollador.
                 </p>
             </div>
 
-            <div class="w50">
+            <div class="w50 rv-box-rigth">
                 <img class="img" src="./assets/img/img1.jpg" alt="">
             </div>
         </div>
@@ -66,63 +68,78 @@
 
     <section class="services" id="services">
         <div class="heading white">
-            <h2>Mis servicios</h2>
+            <h2 class="rv-title">Mis servicios</h2>
             <!-- <p>Anuthign</p> -->
         </div>
 
         <div class="content">
-            <div class="services-box">
+            <div class="services-box rv-box-left">
                 <img src="./assets/img/icon1.png">
                 <h2>Diseño Web</h2>
-                <p>Desarrollo original y a tu medida</p>
+                <p>
+                    Diseño personalizado y original para
+                    tus necesidades y enfocado a tu negocio.
+                </p>
             </div>
-            <div class="services-box">
+            <div class="services-box rv-box-rigth">
                 <img src="./assets/img/icon2.png">
                 <h2>Desarrollo web</h2>
-                <p>Sistemas administrativos como E-commerce CMS, Paginas Web.</p>
+                <p>
+                    Sistemas de Administración tales como Comercio Electronico (E-Commerce),
+                    CMS's, Páginas Web entre otros.
+                </p>
             </div>
 
-            <div class="services-box">
+            <div class="services-box rv-box-left">
                 <img src="./assets/img/icon2.png">
                 <h2>Desarrollo Escritorio</h2>
-                <p>Puntos de Venta (POS), Automatizacion de Procesos.</p>
+                <p>
+                    Sistemas para Puntos de Venta, integración con Lectores Biométricos,
+                    Lectores RFID, Barras y QR.
+                </p>
             </div>
 
-            <div class="services-box">
+            <div class="services-box rv-box-rigth">
                 <img src="./assets/img/icon3.png">
-                <h2>Desarrollo Movil</h2>
-                <p>Aplicaciones para celular Android con despliegue en la Playstore</p>
+                <h2>Desarrollo Móvil</h2>
+                <p>
+                    Aplicaciones para celulares Android, para uso
+                    personal o uso comercial para PlayStore.
+                </p>
             </div>
         </div>
     </section>
 
     <section class="work" id="work">
         <div class="heading">
-            <h2>Mi trabajo</h2>
-            <!-- <p>Anuthign</p> -->
+            <h2 class="rv-title">Mi trabajo</h2>
+            <p>Conoce mis proyectos publicos que he desarrollado.</p>
         </div>
 
         <div class="content">
-            <div class="work-box">
+            <div class="work-box rv-box-left">
                 <img src="./assets/img/Inicio-Manjar-rm.png" alt="Manjar RM Web Site">
                 <div class="work-box-body">
                     <h1 class="title-box">Manjar RM</h1>
                     <p class="subtitle-box">E-commerce</p>
-                    <p class="info-card-box">E-commerce para pedidos a domciio</p>
+                    <p class="info-card-box">
+                        Comercio electronico, para pedidos de Comidas a domicilio con integracion
+                        de pagos con tarjetas bancarias.
+                    </p>
 
                     <a class="btn" href="https://manjar-rm.mx" target="_blank" >Visitar Sitio</a>
                     <!-- <a href="https://manjar-rm.mx" target="_blank">Visitar Sitio</a> -->
                 </div>
             </div>
 
-            <div class="work-box">
+            <div class="work-box rv-box-rigth">
                 <img src="./assets/img/portfolio.png" alt="Mi portafolio Web Site">
                 <div class="work-box-body">
                     <h1 class="title-box">Portafolio</h1>
                     <p class="subtitle-box">Pagina Web</p>
-                    <p class="info-card-box">Mi portafolio realizado con HTML, CSS y JS</p>
+                    <p class="info-card-box">Mi sitio Personal.</p>
 
-                    <a class="btn" href="https://manjar-rm.mx" target="_blank" >Visitar Sitio</a>
+                    <a class="btn" href="https://raumid.github.io/portafolio/" target="_blank" >Visitar Sitio</a>
                     <!-- <a href="https://manjar-rm.mx" target="_blank">Visitar Sitio</a> -->
                 </div>
             </div>
@@ -173,7 +190,7 @@
 
     <section class="contact" id="contact">
         <div class="heading white">
-            <h2>Contact Me</h2>
+            <h2 class="rv-title">Contact Me</h2>
             <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing
                 elit. Asperiores totam repudiandae error optio accusamus ratione maxime nisi quis omnis perferendis. Ad
                 ipsa alias voluptate numquam sequi quia reprehenderit dolor nemo!</p> -->
@@ -181,9 +198,9 @@
 
         <div class="content">
             <div class="contact-info">
-                <h3>Informacion De Contacto</h3>
+                <h3 class="rv-subtitle">Informacion De Contacto</h3>
                 <div class="contact-info-box">
-                    <div class="box">
+                    <div class="box rv-tel">
                         <div class="icon">
                             <i class="fa fa-phone"></i>
                         </div>
@@ -195,7 +212,7 @@
                         </div>
                     </div>
 
-                    <div class="box">
+                    <div class="box rv-email">
                         <div class="icon">
                             <i class="fa fa-envelope-o"></i>
                         </div>
@@ -237,6 +254,7 @@
 	</a>
 
     <script type="text/javascript" src="./assets/js/index.js"> </script>
+    <script tyoe="text/javascript" src="./assets/js/reveal.js"></script>
 </body>
 
 </html>
