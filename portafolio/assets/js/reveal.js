@@ -1,18 +1,18 @@
 ScrollReveal(
     { 
         reset: true,
-        distance: '120px',
-        duration: 2500 ,
-        delay: 400
+        // distance: '40px',
+        duration: 1500 ,
+        delay: 100
     }
 );
 
-//TITLE
-ScrollReveal().reveal('.rv-title', {delay: 200, origin: 'left'});
-ScrollReveal().reveal('.rv-subtitle', {delay: 500, origin: 'bottom'})
+// //TITLE
+ScrollReveal().reveal('.rv-title', {delay: 200, origin: 'left', distance: '120px'});
+ScrollReveal().reveal('.rv-subtitle', {delay: 400, origin: 'bottom', distance: '120px'})
 
-ScrollReveal().reveal('.rv-box-left', {delay: 300, origin: 'left'})
-ScrollReveal().reveal('.rv-box-rigth', {delay: 400, origin: 'rigth'})
+ScrollReveal().reveal('.rv-box-left', {delay: 250, origin: 'left', distance: '120px'});
+ScrollReveal().reveal('.rv-box-right', {delay: 500, origin: 'right', distance: '20px'});
 
-ScrollReveal().reveal('.rv-tel', {delay: 300, origin: 'top'});
-ScrollReveal().reveal('.rv-email', {delay: 500, origin: 'top'});
+ScrollReveal().reveal('.rv-tel', {delay: 250, origin: 'top', distance: '120px'});
+ScrollReveal().reveal('.rv-email', {delay: 400, origin: 'top', distance: '120px'});
