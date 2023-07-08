@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Raumid Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Portafolio</a>
+        <div class="toggle" onClick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu">
+            <li class="list"><a href="#home" onClick="toggleMenu()">Inicio</a></li>
+            <li class="list"><a href="#about" onClick="toggleMenu()">Sobre mi</a></li>
+            <li class="list"><a href="#services" onClick="toggleMenu()">Servicios</a></li>
+            <li class="list"><a href="#work" onClick="toggleMenu()">Trabajo</a></li>
+            <li class="list"><a href="#testimonial" onClick="toggleMenu()">Testimonios</a></li>
+            <li class="list"><a href="#contact" onClick="toggleMenu()">Contacto</a></li>
+            <div class="indicator"></div>
+        </ul>
+    </header>
+
+    <section class="banner" id="home">
+        <div class="text-box">
+            <h2>Hola, mi nombre es 
+                <br> 
+                <span>Raumid de Jesus.</span>
+            </h2>
+            <h3>Soy Desarrollador Web</h3>
+            <a href="#about" class="btn">Sobre mi</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>Sobre Mi</h2>
+        </div>
+        <div class="content">
+            <div class="content-box w50">
+                <h3>Soy desarrollador Web.</h3>
+                <p>Soy ingeniero Mecatronico con mas de 3 años de experiencia enfocado
+                    en el desarrollo web, he trabajado haciendo e-commerce, CMS, Puntos de venta,
+                    Facturacion Electronica, pasarela de pagos, Biometricos,
+                    Inteligencia Artificial entre otros.
+                </p>
+            </div>
+
+            <div class="w50">
+                <img class="img" src="./assets/img/img1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="heading white">
+            <h2>Mis servicios</h2>
+            <!-- <p>Anuthign</p> -->
+        </div>
+
+        <div class="content">
+            <div class="services-box">
+                <img src="./assets/img/icon1.png">
+                <h2>Diseño Web</h2>
+                <p>Desarrollo original y a tu medida</p>
+            </div>
+            <div class="services-box">
+                <img src="./assets/img/icon2.png">
+                <h2>Desarrollo web</h2>
+                <p>Sistemas administrativos como E-commerce CMS, Paginas Web.</p>
+            </div>
+
+            <div class="services-box">
+                <img src="./assets/img/icon2.png">
+                <h2>Desarrollo Escritorio</h2>
+                <p>Puntos de Venta (POS), Automatizacion de Procesos.</p>
+            </div>
+
+            <div class="services-box">
+                <img src="./assets/img/icon3.png">
+                <h2>Desarrollo Movil</h2>
+                <p>Aplicaciones para celular Android con despliegue en la Playstore<./p>
+            </div>
+        </div>
+    </section>
+
+    <section class="work" id="work">
+        <div class="heading">
+            <h2>Mi trabajo</h2>
+            <!-- <p>Anuthign</p> -->
+        </div>
+
+        <div class="content">
+            <div class="work-box">
+                <img src="./assets/img/Inicio-Manjar-rm.png" alt="Manjar RM Web Site">
+                <div class="work-box-body">
+                    <h1 class="title-box">Manjar RM</h1>
+                    <p class="subtitle-box">E-commerce</p>
+                    <p class="info-card-box">E-commerce para pedidos a domciio</p>
+
+                    <a class="btn" href="https://manjar-rm.mx" target="_blank" >Visitar Sitio</a>
+                    <!-- <a href="https://manjar-rm.mx" target="_blank">Visitar Sitio</a> -->
+                </div>
+            </div>
+
+            <div class="work-box">
+                <img src="./assets/img/portfolio.png" alt="Mi portafolio Web Site">
+                <div class="work-box-body">
+                    <h1 class="title-box">Mi Portafolio</h1>
+                    <p class="subtitle-box">Pagina Web</p>
+                    <p class="info-card-box">Mi portafolio realizado con HTML, CSS y JS</p>
+
+                    <a class="btn" href="https://manjar-rm.mx" target="_blank" >Visitar Sitio</a>
+                    <!-- <a href="https://manjar-rm.mx" target="_blank">Visitar Sitio</a> -->
+                </div>
+            </div>
+
+            <!-- <div class="work-box">
+                <img src="./assets/img/product2.jpg" alt="">
+            </div>
+
+            <div class="work-box">
+                <img src="./assets/img/product3.jpg" alt="">
+            </div>
+
+            <div class="work-box">
+                <img src="./assets/img/product4.jpg" alt="">
+            </div> -->
+        </div>
+        <div class="heading">
+            <a href="#" class="btn">Ver mas</a>
+        </div>
+    </section>
+
+    <section class="testimonial" id="testimonial">
+        <div class="heading">
+            <h2>Testimonios</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Asperiores totam repudiandae error optio accusamus ratione maxime nisi quis omnis perferendis. Ad
+                ipsa alias voluptate numquam sequi quia reprehenderit dolor nemo!</p>
+        </div>
+
+        <div class="content">
+            <div class="testimonial-box">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatem facilis eaque, eligendi
+                    magnam numquam facere corrupti delectus fuga hic recusandae!
+                    Porro aperiam tenetur placeat, similique aliquid consequuntur voluptates! Amet!
+                </p>
+                <h3>SomeOne Famous<br><span>Diseño Creativo</span></h3>
+            </div>
+            <div class="testimonial-box">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatem facilis eaque, eligendi
+                    magnam numquam facere corrupti delectus fuga hic recusandae!
+                    Porro aperiam tenetur placeat, similique aliquid consequuntur voluptates! Amet!
+                </p>
+                <h3>SomeOne Famous<br><span>Diseño Creativo</span></h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Asperiores totam repudiandae error optio accusamus ratione maxime nisi quis omnis perferendis. Ad
+                ipsa alias voluptate numquam sequi quia reprehenderit dolor nemo!</p>
+        </div>
+
+        <div class="content">
+            <div class="contact-info">
+                <h3>Informacion De Contacto</h3>
+                <div class="contact-info-box">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Telefono</h3>
+                            <p>+52 8129716686</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Correo</h3>
+                            <p>raumid98@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-box">
+                <form>
+                    <h3> Comentarios</h3>
+
+                    <input type="text" name="" placeholder="Nombre Completo">
+                    <input type="email" name="" placeholder="Correo Electronico">
+                    <textarea placeholder="Tu mensaje"></textarea>
+                    <input type="submit" value="send">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <p>Copyright 2023 Raumid. Todos los derechos Reservados.</p>
+    </div>
+
+    <!-- <div class="action">
+        <i class="fa fa-whatsapp icono"></i>
+    </div> -->
+
+    <a href="https://wa.me/+528129716686?text=Buen dia raumid, me interesa tu servicio como Desarrollador Web, me podrias dar mas informacion." class="btn-wsp" target="_blank">
+	    <i class="fa fa-whatsapp icono"></i>
+	</a>
+
+    <script type="text/javascript" src="./assets/js/index.js"> </script>
+</body>
+
+</html>
