@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap');
+
+:root {
+    --color-bg: lightblue;
+
+    --color-bg-primary: #fff;
+    --color-text-primary: #000;
+    
+    --color-bg-secondary: #003147;
+    --color-text-secondary : #fff;
+
+    --color-text-tertiary: rgb(45, 162, 201);
+
+    --color-bg-languages: #002536;
+
+    --color-light: lightslategray;
+    --color-icons: lightblue;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 40px 55px rgba(0,0,0,0.2);
+}
+
+/* LEFT SIDE */
+
+.container .left-side {
+    background: var(--color-bg-secondary);
+    padding: 40px;
+}
+
+.container .left-side hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile .img-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .img-box img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile h2 {
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+.profile h2 span {
+    font-size: .8em;
+    font-weight: 400;
+}
+
+.contact {
+    padding-top: 10px;
+}
+
+.contact .title {
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.contact ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.contact ul li .icon {
+    display: inline-block;
+    width: 35px;
+    color: var(--color-icons);
+    font-size: 25px;
+}
+
+.contact ul li a {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    /* padding-left: 10px; */
+}
+
+.contact.education li{
+    margin-bottom: 15px;
+}
+
+.contact.education h5{
+    color: var(--color-icons);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.contact.education h4:nth-child(2){
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact.education h4{
+    color: var(--color-text-secondary);
+    font-weight: 300;
+}
+
+.contact.language .text{
+    color: var(--color-text-secondary);
+}
+
+.contact.language .percent{
+    display: block;
+    background: var(--color-bg-languages);
+    width: 100%;
+    height: 5px;
+    margin-top: 5px;
+}
+
+.contact.language .percent div{
+    background: var(--color-icons);
+    height: 100%;
+}
+
+/* RIGHT SIDE */
+.container .right-side {
+    background: var(--color-bg-primary);
+    padding: 40px;
+}
+
+.about {
+    margin-top: 30px;
+}
+
+.about .title {
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about p{
+    margin-top: 10px;
+}
+
+.about .box{
+    display: flex;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.about .box .year-company{
+    min-width: 150px;
+}
+
+.about .box .year-company h5{
+    color: var(--color-light);
+}
+
+.about .box .text h4{
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    font-size: 1em;
+}
+
+.about.skills .box-skill {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about.skills .box-skill .content {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    
+}
+
+.about.skills .box-skill .content h3 {
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    line-height: 2em;
+    color: var(--color-text-tertiary);
+}
+
+/* .about.interesting ul li{
+    list-style: none;
+    margin: 10px 0;
+} */
+
+@media (max-width: 1000px)
+{
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .about.skills .box-skill{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width: 600px)
+{
+    .about .box {
+        flex-direction: column;
+    }
+
+    .about .box .year-company {
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+}
