@@ -1,45 +1,32 @@
-function cargarEstilos(callback) {
-  const url = "assets/css/style.css";
-  const xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.status === 200) {
-        const estiloCSS = xhr.responseText;
-        callback(estiloCSS);
-      } else {
-        console.error("Error al cargar el archivo CSS");
-      }
-    }
-  };
-  xhr.open("GET", url, true);
-  xhr.send();
-}
+const btnDownload = document.querySelector("#btnDownload");
 
-// Función para descargar el PDF
-function descargarPDF() {
-  const contenidoHTML = document.getElementById("contenido").innerHTML;
-  const opciones = {
-    margin: 10,
-    filename: "archivo.pdf",
-  };
+const nameFile = "CV_RaumidSantizFelipe-Desarrollador";
+const extensionFile = ".PDF";
 
-  const ventana = window.open("", "", "height=500,width=800");
-  ventana.document.write(
-    "<html><head><title>" + opciones.filename + "</title>"
-  );
+btnDownload.addEventListener("click", async function() {
+  window.html2canvas = html2canvas;
+  window.jsPDF = window.jspdf.jsPDF;
 
-  // Cargar estilos desde el archivo CSS y agregarlos al PDF
-  cargarEstilos(function (estiloCSS) {
-    ventana.document.write("<style>" + estiloCSS + "</style>");
-    ventana.document.write("</head><body>");
-    ventana.document.write(contenidoHTML);
-    ventana.document.write("</body></html>");
-    ventana.document.close();
+  const doc = new jsPDF();
 
-    ventana.onload = function () {
-      ventana.focus();
-      ventana.print();
-      ventana.close();
-    };
-  });
-}
+  //TRY WITH IMG CANVAS
+  const contentCanvas = await html2canvas(document.getElementById("contenido"));
+
+  const imgWidth = contentCanvas.width;
+  const imgHeight = contentCanvas.height;
+
+  const pdfWidth = doc.internal.pageSize.getWidth();
+  const pdfHeight = doc.internal.pageSize.getHeight();
+
+  const scaleFactor = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+
+  const adjustedWidth = imgWidth * scaleFactor;
+  const adjustedHeight = imgHeight * scaleFactor;
+
+  const xPosition = (pdfWidth - adjustedWidth) / 2;
+  const yPosition = (pdfHeight - adjustedHeight) / 2;
+
+  const image = contentCanvas.toDataURL("image/png");
+  doc.addImage(image, "png",0, 0, adjustedWidth, pdfHeight - 20);
+  doc.save(nameFile + extensionFile);
+});

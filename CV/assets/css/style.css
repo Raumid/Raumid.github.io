@@ -43,10 +43,10 @@ body {
 .container {
     background: #fff;
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px;
     min-height: 1000px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 0.9fr 2fr;
     box-shadow: 0 40px 55px rgba(0,0,0,0.2);
 }
 
@@ -54,7 +54,7 @@ body {
 
 .container .left-side {
     background: var(--color-bg-secondary);
-    padding: 40px;
+    padding: 20px;
 }
 
 .container .left-side hr {
@@ -124,7 +124,7 @@ body {
     display: inline-block;
     width: 35px;
     color: var(--color-icons);
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .contact ul li a {
@@ -241,7 +241,7 @@ body {
     height: var(--size-btn-wsp);
     line-height: var(--size-btn-wsp);
     font-size: calc(var(--size-btn-wsp) - 25px);
-    background:#a11c1c;
+    background:#ba2f2b;
     color:#FFF;
     text-align:center;
     border-radius: 50%;
