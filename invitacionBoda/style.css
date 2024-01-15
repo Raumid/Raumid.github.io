@@ -50,6 +50,17 @@ Template:	Wedding Bells HTML,CSS Template
 /*===============================================*/
 /* 2. GENERAL		 						 */
 /*===============================================*/	
+
+:root {
+	--size-btn-wsp: 70px;
+    --right-btn-wsp: 50px;
+    --bootom-btn-wsp: 50px;
+
+    --size-btn-wsp-sm: 60px;
+    --right-btn-wsp-sm: 25px;
+    --bootom-btn-wsp-sm: 45px;
+}
+
 html, body{
 	height: 100%;
 	width: 100%;
@@ -1493,6 +1504,23 @@ span.swirl_right_transparent{
 }
 .footer_copyright a:hover{
 	color:#FFFFFF;
+}
+
+.btn-wsp {
+    position: fixed;
+    bottom: var(--bootom-btn-wsp);
+    right: var(--right-btn-wsp);
+    width: var(--size-btn-wsp);
+    height: var(--size-btn-wsp);
+    line-height: var(--size-btn-wsp);
+    font-size: calc(var(--size-btn-wsp) - 20px);
+    background:#000000;
+    color:#FFF;
+    text-align:center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
 }
 
 /*===============================================*/
