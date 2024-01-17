@@ -7,7 +7,7 @@
     <meta name="author" content="SindevoThemes" />
     <meta name="description" content="Get in the spotlight" />
     <meta name="keywords" content="premium css templates, premium wordpress themes, wedding themes, themeforest" />
-    <title>Wedding Bells | Responsive Wedding Template</title>
+    <title>Janeth Y Raumid</title>
     <link rel="stylesheet" type="text/css" media="all" href="style.css" />
     <link rel="stylesheet" type="text/css" media="all" href="assets/colors/green.css" />
     <link rel="stylesheet" href="assets/css/carousel.css">
@@ -33,7 +33,7 @@
                         <li><a href="#">LOVELY DROP DOWN</a></li>
                     </ul>
                 </li> -->
-                <li><a href="#countdown">CONTADOR</a></li>
+                <li><a href="#countdown">FALTAN</a></li>
                 <li><a href="#couple">LOS NOVIOS</a></li>
                 <li><a href="#confirm">CONFIRMACION</a></li>
                 <!-- <li><a href="#">GET IN TOUCH</a></li> -->
@@ -59,7 +59,7 @@
             </div>
         </div>
         <div class="countdown_container" id="countdown">
-            <h3 class="form_subtitle rv-box-left">FALTAN</h3>
+            <h4 class="form_subtitle rv-box-left">FALTAN</h4>
             <!-- <h2 class="centered_title rv-box-left">Faltan</h2> -->
 
             <!-- COUNTDOWN -->
@@ -180,7 +180,7 @@
                 </div>
             </div>
 
-            <h3 class="form_subtitle rv-box-left">PARA LA BODA</h3>
+            <h4 class="form_subtitle rv-box-left">PARA LA BODA</h4>
             <!-- <h2 class="centered_title rv-box-left">Para nuestra boda</h2> -->
 
             <!-- <div class="rsvp_button"><span class="swirl_left_small">
@@ -302,7 +302,7 @@
           </div> -->
 
           <div class="home_bottom">
-            <h2 class="form_subtitle rv-box-left">DONDE Y CUANDO</h2>
+            <h2 class="form_subtitle rv-box-left">LUGAR</h2>
             <div class="full_width_centered">
                 <div class="left12_first rv-box-left">
                     <div class="bottom_icon"><img src="assets/images/icon_music.png" alt="" title="" /></div>
@@ -355,8 +355,8 @@
                             <h3 class="subtitle">Porfavor presiona el boton si asistiras a la boda.</h3>
                         </div>
 
-                        <div class="form_row_full rv-box-subtitle rv-box-left">
-                            <a href="#" class="thumb_read_more">Confirmar Asistencia</a>
+                        <div class="form_row_full rv-box-subtitle rv-box-left" id="container-btn-confirm">
+                            <a class="thumb_read_more" id="btn-confirm">Confirmar Asistencia</a>
                         
                         </div>
 
@@ -480,7 +480,8 @@
             <div class="full_width_centered">
                 <div class="footer_sign"><span class="swirl_left_transparent"><span class="swirl_right_transparent"><img
                                 src="images/birds_icon.png" alt="" title="" /></span></span></div>
-                <div class="footer_names">JANETH &amp; RAUMID</div>
+                <!-- <div class="footer_names">JANETH &amp; RAUMID</div> -->
+                <div class="footer_names">RAUNETH</div>
                 <div class="footer_socials">
                     <ul>
                         <li><a href="#"><img src="assets/images/social/twitter.png" alt="" title="" /></a></li>
@@ -493,10 +494,10 @@
                 </div>
                 <nav class="footer_menu">
                     <ul>
-                        <li><a href="index.html" class="selected">HOME</a></li>
-                        <li><a href="page.html">THE WEDDING</a></li>
+                        <li><a href="#home" class="selected">Inicio</a></li>
+                        <!-- <li><a href="page.html">THE WEDDING</a></li>
                         <li><a href="rsvp.html">RSVP</a></li>
-                        <li><a href="contact.html">GET IN TOUCH</a></li>
+                        <li><a href="contact.html">GET IN TOUCH</a></li> -->
                         <li><a onClick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"
                                 href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
                     </ul>
@@ -507,9 +508,10 @@
         </div>
 
     </div>
-
-    <a class="btn-wsp" target="_blank">
-	    <i class="fa fa-pause-circle"></i>
+    <audio style="display: none;" controls src="./assets/music/chachacha.mp3" id="musicPlayer"></audio>
+    <a class="btn-wsp" target="_blank" id="btn-audio">
+        
+	    <i class="fa fa-pause" id="iconMusicPlayer"></i>
 	</a>
 
 
@@ -564,8 +566,11 @@
         var main_menu = new main_menu.dd("main_menu");
         main_menu.init("main_menu", "menuhover");
     </script>
+    <script type="text/javascript" src="assets/js/music.js"></script>
 
     <script type="text/javascript" src="assets/js//reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="assets/js//alerts.js"></script>
 </body>
 </body>
 

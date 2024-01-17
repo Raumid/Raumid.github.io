@@ -1275,6 +1275,16 @@ h3.form_toptitle{
 	padding:0;
 	clear:both;
 }
+h4.form_subtitle{
+	text-align: center;
+	font-weight: 800;
+	font-size: 26px;
+	padding: 0 0 20px 0;
+	margin:0 0 40px 0;
+	clear:both;
+	background:url(assets/images/blog_divider.png) no-repeat center bottom;
+}
+
 .form_row{
 	float:left;
 	padding:0;
@@ -1513,7 +1523,7 @@ span.swirl_right_transparent{
     width: var(--size-btn-wsp);
     height: var(--size-btn-wsp);
     line-height: var(--size-btn-wsp);
-    font-size: calc(var(--size-btn-wsp) - 20px);
+    font-size: calc(var(--size-btn-wsp) - 40px);
     background:#000000;
     color:#FFF;
     text-align:center;
@@ -2078,6 +2088,12 @@ span.swirl_right_transparent{
 	h3.form_toptitle{
 	font-size:24px
 	}
+	h4.form_subtitle{
+		font-size:20px;
+		padding:0 10px 10px 10px;
+		line-height:26px;
+		margin:0 0 20px 0;
+	}
 	.select_container{
 	width:100%;
 	margin:0 0 0 0;
@@ -2112,12 +2128,14 @@ span.swirl_right_transparent{
 
 	.countdown 
 	{
+		/* max-height: 10px; */
 		/* margin: 100px auto;
 		width: 50%;
 		display: flex;
 		justify-content: center; */
-		gap: 10px;
-		/* font-family: sans-serif; */
+		gap: 15px;
+		margin: 10px auto;
+
 	}
 
 	.time-section {
@@ -2140,4 +2158,13 @@ span.swirl_right_transparent{
 	font-size: 30px;
 	width: 30px;
 	}
+
+	.btn-wsp {
+        bottom: var(--bootom-btn-wsp-sm);
+        right: var(--right-btn-wsp-sm);
+        width: var(--size-btn-wsp-sm);
+        height: var(--size-btn-wsp-sm);
+        line-height: var(--size-btn-wsp-sm);
+        font-size: calc(var(--size-btn-wsp-sm) - 30px);
+    }
 }
