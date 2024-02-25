@@ -4,21 +4,33 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
-    <meta name="author" content="SindevoThemes" />
-    <meta name="description" content="Get in the spotlight" />
-    <meta name="keywords" content="premium css templates, premium wordpress themes, wedding themes, themeforest" />
+    <meta name="author" content="Raumid" />
+    <meta name="description" content="Boda de Janeth y Raumid" />
+    <meta name="keywords" content="boda, raumid, janeth, casados, invitacion, digital" />
     <title>Janeth Y Raumid</title>
+    <link rel="stylesheet" type="text/css" media="all" href="assets/css/loader.css" />
     <link rel="stylesheet" type="text/css" media="all" href="style.css" />
     <link rel="stylesheet" type="text/css" media="all" href="assets/colors/green.css" />
     <link rel="stylesheet" href="assets/css/carousel.css">
     <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-    <div id="main_container">
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <p>Cargando Invitacion...</p>
+    </div>
+
+    <div id="carta" class="carta">
+        <img src="assets/images/sobreinvita.png" alt="Imagen de carta" class="carta-img" id="carta-img">
+        <div class="instruction">
+            <i class="fa fa-hand-o-up" aria-hidden="true"></i>
+            <span>Click Aqui</span>
+        </div>
+    </div>
+    <div id="main_container" class="hidden">
 
         <a class="show_menu" href="#"><img src="assets/images/mobile_menu_open.png" alt="" title="" /></a>
         <a class="hide_menu" href="#"><img src="assets/images/mobile_menu_close.png" alt="" title="" /></a>
@@ -26,43 +38,34 @@
         <nav class="menu" id="home">
             <ul id="main_menu">
                 <li><a class="selected" href="#home">INICIO</a></li>
-                <!-- <li><a href="#">LA BODA</a>
-                    <ul>
-                        <li><a href="#">LOVELY DROP DOWN</a></li>
-                        <li><a href="#">LOVELY DROP DOWN</a></li>
-                        <li><a href="#">LOVELY DROP DOWN</a></li>
-                    </ul>
-                </li> -->
                 <li><a href="#countdown">FALTAN</a></li>
                 <li><a href="#couple">LOS NOVIOS</a></li>
-                <li><a href="#confirm">CONFIRMACION</a></li>
-                <!-- <li><a href="#">GET IN TOUCH</a></li> -->
+                <li><a href="#gallery">GALERIA</a></li>
+                <li><a href="#confirm">ASISTENCIA</a></li>
             </ul>
         </nav>
 
         <div class="title_container">
-
             <div class="title_front">NOS CASAMOS</div>
             <div class="love_birds"><img src="assets/images/birds_icon.png" alt="" title="" /></div>
             <div class="title rv-title">Janeth <span>&amp;</span> Raumid</div>
-            <div class="title_date rv-subtitle"><span class="swirl_left"><span class="swirl_right">20.07.2024</span></span></div>
+            <div class="title_date rv-subtitle"><span class="swirl_left"><span
+                        class="swirl_right">20.07.2024</span></span></div>
             <div class="title_under rv-subtitle">NO FALTES</div>
-
         </div>
 
         <div class="slider_container">
             <div class="slider_trans_black"></div>
             <div id="random">
-                <div style="background-image: url(assets/images/slider/slide1.jpg);"></div>
-                <div style="background-image: url(assets/images/slider/slide2.jpg);"></div>
-                <div style="background-image: url(assets/images/slider/slide3.jpg);"></div>
+                <!-- <div style="background-image: url(assets/images/slider/slide1.jpg);"></div> -->
+                <!-- <div style="background-image: url(assets/images/slider/slide3.jpg);"></div> -->
+                <div style="background-image: url(assets/images/slider/slider1.jpeg);"></div>
+                <div style="background-image: url(assets/images/slider/slider2.jpg);"></div>
+                <div style="background-image: url(assets/images/slider/slider3.jpeg);"></div>
             </div>
         </div>
         <div class="countdown_container" id="countdown">
             <h4 class="form_subtitle rv-box-left">FALTAN</h4>
-            <!-- <h2 class="centered_title rv-box-left">Faltan</h2> -->
-
-            <!-- COUNTDOWN -->
 
             <div class="countdown">
                 <div class="time-section" id="days">
@@ -181,13 +184,6 @@
             </div>
 
             <h4 class="form_subtitle rv-box-left">PARA LA BODA</h4>
-            <!-- <h2 class="centered_title rv-box-left">Para nuestra boda</h2> -->
-
-            <!-- <div class="rsvp_button"><span class="swirl_left_small">
-                <span class="swirl_right_small">
-                    <a href="#">Para </a>
-                </span>
-            </div> -->
         </div>
 
         <div class="about_content" id="couple">
@@ -201,11 +197,8 @@
                     <div class="about_pic_container">
                         <span class="about_picframe"></span>
                         <div class="about_social">
-                            <a href="#"><img src="assets/images/social/twitter.png" alt="" title="" /></a>
-                            <a href="#"><img src="assets/images/social/facebook.png" alt="" title="" /></a>
-                            <a href="#"><img src="assets/images/social/pinterest.png" alt="" title="" /></a>
                         </div>
-                        <div class="about_pic"><img src="assets/images/image12.jpg" alt="" title="" /></div>
+                        <div class="about_pic"><img src="assets/images/rauylulu/lulu.jpg" alt="" title="" /></div>
                     </div>
                     <!-- <a href="#" class="thumb_read_more">MAS SOBRE JANETH</a> -->
                     <p>Ingeniera Mecatronica.</p>
@@ -218,15 +211,12 @@
                 </div>
                 <div class="left12_last rv-subtitle">
                     <span class="names_titles">El novio</span>
-                    <h2>Raumid de Jesus Sántiz</h2>
+                    <h2>RAUMID DE JESUS SANTIZ</h2>
                     <div class="about_pic_container">
                         <span class="about_picframe"></span>
                         <div class="about_social">
-                            <a href="#"><img src="assets/images/social/twitter.png" alt="" title="" /></a>
-                            <a href="#"><img src="assets/images/social/facebook.png" alt="" title="" /></a>
-                            <a href="#"><img src="assets/images/social/pinterest.png" alt="" title="" /></a>
                         </div>
-                        <div class="about_pic"><img src="assets/images/image12_2.jpg" alt="" title="" /></div>
+                        <div class="about_pic"><img src="assets/images/rauylulu/raumid.jpg" alt="" title="" /></div>
                     </div>
                     <!-- <a href="#" class="thumb_read_more">MAS SOBRE RAUMID</a> -->
                     <p>Ingeniero Mecatronico.</p>
@@ -234,87 +224,74 @@
                         That dreams are more powerful than facts. That hope always triumphs over experience. That
                         laughter is the only cure for grief. And I believe that love is stronger than death "<a
                             href="#">LOVE QUOTE</a>":</p> -->
-                    <span class="love_quote">.</span>
+                    <span class="love_quote">Lo bueno del silencio es que no miente, lo malo de las palabras es que aveces dicen la verdad.</span>
+                    <!-- <span class="love_quote">Dicen que este universo divino ya tiene trazado el camino.</span> -->
                 </div>
 
-                <div class="clear"></div>
+                <!-- <div class="clear"></div> -->
             </div> <!--end of full width-->
         </div> <!--end of about content-->
 
-        <div class="carousel_container"> 
-           <div class="carousel_container_image">
-             <div class="full_width_carousel">
-                <h2>OUR BRIDESMAIDS AND GROOMSMEN'S</h2>
-                <span class="carousel_titles">BEST MAN &amp; MAID OF HONOR</span>
-                
-                <div class="carousel-minimal">
-                    <div class="carousel-element"></div>
-                    <div class="carousel-element"></div>
-                    <div class="carousel-element"></div>
-                    <div class="carousel-element"></div>
+        <div class="full_width_centered" id="gallery">
+            <div class="latest_posts">
+                 <h2>GALERIA</h2>
+
+                 <div class="slider" id="gallery">
+                    <div class="list">
+                        <div class="item">
+                            <img src="assets/images/rauylulu/img3.jpeg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/rauylulu/img1.jpeg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/rauylulu/img2.jpeg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/rauylulu/img4.jpeg" alt="">
+                        </div>
+                        <!-- <div class="item">
+                            <img src="assets/images/rauylulu/img5.jpg" alt="">
+                        </div> -->
+                    </div>
+                    <div class="buttons">
+                        <button id="prev"><</button>
+                        <button id="next">></button>
+                    </div>
+                    <ul class="dots">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <!-- <li></li> -->
+                    </ul>
                 </div>
-            <div class="view_all_carousel"><a href="#">VIEW ALL BRIDESMAIDS AND GROOMSMEN'S</a></div>
-             </div>
-            </div> 
-          </div>
 
-        <!-- <div class="full_width_centered">
-               <div class="latest_posts">
-                    <h2>FROM THE BLOG</h2>
-                    <div class="left13">
-                      <div class="latest_post">
-                        <div class="post_info">
-                           <span class="post_date">20 JUNE 2015</span>
-                           <h3><a href="#">THE PROPOSAL WAS AMAZING</a></h3>
-                           <a href="#" class="post_read_more">READ MORE</a>
-                        </div> 
-                        <img src="assets/images/post_thumb1.jpg" alt="" title="" />
-                      </div>
-                    </div>
-                    <div class="left13">
-                      <div class="latest_post">
-                        <div class="post_info">
-                           <span class="post_date">18 MAY 2015</span>
-                           <h3><a href="#">OUR ROMANTIC HONEYMOON IN VENICE</a></h3>
-                           <a href="#" class="post_read_more">READ MORE</a>
-                        </div> 
-                        <img src="assets/images/post_thumb2.jpg" alt="" title="" />
-                      </div>
-                    </div>
-                    <div class="left13_last">
-                      <div class="latest_post">
-                        <div class="post_info">
-                           <span class="post_date">31 MARCH 2015</span>
-                           <h3><a href="#">LOVE IS COMPOSED OF A SINGLE SOUL</a></h3>
-                           <a href="#" class="post_read_more">READ MORE</a>
-                        </div> 
-                        <img src="assets/images/post_thumb3.jpg" alt="" title="" />
-                      </div>
-                    </div>
-                    <a href="blog.html" class="view_all">VIEW ALL POSTS</a>
-                    <div class="clear"></div>
-              </div>
-          </div> -->
+           </div>
+       </div>
+        
 
-          <div class="home_bottom">
+        <div class="home_bottom">
             <!-- <h2 class="form_subtitle rv-box-left">LUGAR</h2> -->
             <div class="full_width_centered">
                 <div class="left12_first rv-box-left">
                     <div class="bottom_icon"><img src="assets/svg/church-solid.svg" alt="" title="" /></div>
                     <h2>Ceremonia Religiosa</h2>
                     <span class="subtitle">12:00 pm</span>
-                    <p>Acompañanos a la seremonia de boda en la capilla de<strong>Luis Espinoza</strong>  
+                    <p><strong>Capilla de Luis Espinoza, Bochil</strong>
                         <!-- <a href="#">Otro texto</a> -->
-                        </p>
-                    <a href="https://maps.app.goo.gl/XWmChdhgzjuzkjzb7" target="_blank" class="post_read_more">ABRIR GOOGLE MAPS</a>
+                    </p>
+                    <a href="https://maps.app.goo.gl/XWmChdhgzjuzkjzb7" target="_blank" class="post_read_more">ABRIR
+                        GOOGLE MAPS</a>
                 </div>
                 <div class="left12_last rv-box-right">
-                    <div class="bottom_icon"><img src="assets/svg/martini-glass-citrus-solid.svg" alt="" title="" /></div>
-                    <h2>Recepcion</h2>
+                    <div class="bottom_icon"><img src="assets/svg/martini-glass-citrus-solid.svg" alt="" title="" />
+                    </div>
+                    <h2>Recepción</h2>
                     <span class="subtitle">02:00 pm</span>
                     <p>
                         <strong>
-                            Luis Espinoza #40
+                            Luis Espinoza, Bochil
                         </strong>
                         <!-- <strong>quia voluptas</strong> 
                         sit aspernatur aut odit aut fugit, sed
@@ -323,18 +300,9 @@
                         dolores eos qui ratione voluptatem sequi nesciunt. Neque
                         quisquam est, qui dolorem ipsum -->
                     </p>
-                    <a href="https://maps.app.goo.gl/XWmChdhgzjuzkjzb7" target="_blank" class="post_read_more">ABRIR GOOGLE MAPS</a>
+                    <a href="https://maps.app.goo.gl/XWmChdhgzjuzkjzb7" target="_blank" class="post_read_more">ABRIR
+                        GOOGLE MAPS</a>
                 </div>
-                <!-- <div class="left13_last">
-                    <div class="bottom_icon"><img src="assets/images/icon_gifts.png" alt="" title="" /></div>
-                    <h2>GIFT REGISTRY</h2>
-                    <span class="subtitle">GIVEN FREELY AND OUT OF PURE LOVE</span>
-                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit <a href="#">esse quam nihil</a>
-                        aspernatur aut odit aut fugit molestiae consequatur, vel illum <strong>qui dolorem</strong> eum
-                        fugiat quo voluptas nulla pariatur aspernatur.</p>
-                    <a href="page.html" class="post_read_more">READ MORE</a>
-                </div> -->
-
                 <div class="clear"></div>
             </div>
         </div>
@@ -349,125 +317,30 @@
                     <div class="form_section">
                         <h3 class="form_subtitle rv-box-left">ASISTENCIA</h3>
                         <div class="form_row_full rv-box-top">
-                            <h2>Familia Perez Rodriguez</h2>
-                            <h3 class="subtitle">Porfavor presiona el boton si asistiras a la boda.</h3>
+                            <h2 id="nameGuest"></h2>
+                            <!-- <h3 id="numGuests"></h3> -->
+                            <h3 id="textConfirm" class="subtitle"></h3>
+                        </div>
+
+                        <div id="numguest-container" class="form_row_full">
+                            <label>Numero de Invitados</label>
+                            <div class="select_container">
+                                <select class="form_select valid" id="number-guests">
+                                </select>
+                            </div>
+                        </div>
+                        <h2 id="nameGuest"></h2>
+
+                        <div id="comment-container" class="form_row_full">
+                            <label>¿Quieres dejar un mensaje? (opcional)</label>
+                            <textarea maxlength="255" class="form_textarea_full" name="rsvpcomments" id="rsvpcomments"></textarea>
                         </div>
 
                         <div class="form_row_full rv-box-subtitle rv-box-left" id="container-btn-confirm">
-                            <a class="thumb_read_more" id="btn-confirm">Confirmar Asistencia</a>
-                        
-                        </div>
-
-
-                        <!-- <div class="checkbox_container left13_first">
-                            <input type="checkbox" id="c1" name="c1" value="Wedding Ceremony">
-                            <label for="c1">Ceremonia de la iglesia - <span>(at 10.08.2015)</span></label>
-                        </div>
-                        <div class="checkbox_container left13">
-                            <input type="checkbox" id="c2" name="c2" value="Church Ceremony">
-                            <label for="c2">Fiesta de Ceremonia - <span>(at 11.08.2015)</span></label>
-                        </div> -->
-                        <!-- <div class="checkbox_container left13_last">
-                            <input type="checkbox" id="c3" name="c3" value="Ring Ceremony">
-                            <label for="c3">Ring Ceremony - <span>(at 12.08.2015)</span></label>
-                        </div>
-                        <div class="checkbox_container left13_first">
-                            <input type="checkbox" id="c4" name="c4" value="Exchanging of Vows">
-                            <label for="c4">Exchanging of Vows - <span>(at 13.08.2015)</span></label>
-                        </div>
-                        <div class="checkbox_container left13">
-                            <input type="checkbox" id="c5" name="c5" value="Bridal Shower">
-                            <label for="c5">Bridal Shower - <span>(at 14.08.2015)</span></label>
-                        </div>
-                        <div class="checkbox_container left13_last">
-                            <input type="checkbox" id="c6" name="c6" value="After Brunch">
-                            <label for="c6">After Brunch - <span>(at 15.08.2015)</span></label>
-                        </div> -->
-                        
-                        
-                    </div>
-
-                    <!-- <h3 class="form_subtitle">PLEASE SELECT A MEAL CHOICE</h3>
-                    <div class="form_section">
-                        <div class="form_row left13_first">
-                            <label>MAIN</label>
-                            <div class="select_container">
-                                <select class="form_select" name="mainmeal">
-                                    <option value="Chicken">Chicken</option>
-                                    <option value="Beef">Beef</option>
-                                    <option value="Fish">Fish</option>
-                                    <option value="Vegetarian">Vegetarian</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form_row left13">
-                            <label>SECOND</label>
-                            <div class="select_container">
-                                <select class="form_select" name="secondmeal">
-                                    <option value="Chicken">Chicken</option>
-                                    <option value="Beef">Beef</option>
-                                    <option value="Fish">Fish</option>
-                                    <option value="Vegetarian">Vegetarian</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form_row left13_last">
-                            <label>DESERT</label>
-                            <div class="select_container">
-                                <select class="form_select" name="desert">
-                                    <option value="Chocolate Cake">Chocolate Cake</option>
-                                    <option value="Cup Cookies">Cup Cookies</option>
-                                    <option value="Pumpkin Cheesecake">Pumpkin Cheesecake</option>
-                                    <option value="Raspberry Cheesecake">Raspberry Cheesecake</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form_row_full">
-                            <label>MENU NOTES</label>
-                            <textarea class="form_textarea_full" name="menunotes"></textarea>
+                            <a class="thumb_read_more" id="btn-confirm">Confirmar</a>
+                            <!-- <a class="form_submit_contact" id="btn-confirm">Confirmar Asistencia</a> -->
                         </div>
                     </div>
-
-                    <h3 class="form_subtitle">GUEST DETAILS &amp; COMMENTS</h3>
-                    <div class="form_section">
-                        <div class="form_row_full">
-                            <label>NR OF GUESTS</label>
-                            <div class="select_container">
-                                <select class="form_select" name="guests">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5+">5+</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form_row left13_first">
-                            <label>NAME</label>
-                            <input type="text" class="form_input required" name="rsvpname" id="rsvpname">
-                        </div>
-                        <div class="form_row left13">
-                            <label>EMAIL</label>
-                            <input type="text" class="form_input required email" name="rsvpemail" id="rsvpemail">
-                        </div>
-                        <div class="form_row left13_last">
-                            <label>PHONE</label>
-                            <input type="text" class="form_input required" name="rsvpphone" id="rsvpphone">
-                        </div>
-                        <div class="form_row_full">
-                            <label>OTHER COMMENTS</label>
-                            <textarea class="form_textarea_full" name="rsvpcomments" id="rsvpcomments"></textarea>
-                        </div>
-                        <div class="form_row">
-                            <input type="submit" name="submit" class="form_submit_contact" id="submit"
-                                value="SEND RSVP">
-                            <input class="" type="hidden" name="to" value="youremail@yourwebsite.com">
-                            <input class="" type="hidden" name="subject" value="RSVP form message">
-                            <label id="loader" style="display:none;"><img src="images/loader.gif" alt="Loading..."
-                                    id="LoadingGraphic"></label>
-                        </div>
-                    </div> -->
-
                 </form>
             </div>
 
@@ -482,12 +355,12 @@
                 <div class="footer_names">RAUNETH</div>
                 <div class="footer_socials">
                     <ul>
-                        <li><a ><img src="assets/images/social/twitter.png" alt="" title="" /></a></li>
-                        <li><a ><img src="assets/images/social/facebook.png" alt="" title="" /></a></li>
-                        <li><a ><img src="assets/images/social/pinterest.png" alt="" title="" /></a></li>
-                        <li><a ><img src="assets/images/social/vimeo.png" alt="" title="" /></a></li>
-                        <li><a ><img src="assets/images/social/google.png" alt="" title="" /></a></li>
-                        <li><a ><img src="assets/images/social/instagram.png" alt="" title="" /></a></li>
+                        <!-- <li><a><img src="assets/images/social/twitter.png" alt="" title="" /></a></li>
+                        <li><a><img src="assets/images/social/facebook.png" alt="" title="" /></a></li>
+                        <li><a><img src="assets/images/social/pinterest.png" alt="" title="" /></a></li>
+                        <li><a><img src="assets/images/social/vimeo.png" alt="" title="" /></a></li>
+                        <li><a><img src="assets/images/social/google.png" alt="" title="" /></a></li>
+                        <li><a><img src="assets/images/social/instagram.png" alt="" title="" /></a></li> -->
                     </ul>
                 </div>
                 <nav class="footer_menu">
@@ -500,19 +373,15 @@
                                 href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
                     </ul>
                 </nav>
-                <div class="footer_copyright">Made with love by <a href="http://themes.sindevo.com">SindevoThemes</a>
-                    &amp; <a href="http://ourweddingtheme.com">OURWEDDINGTHEME.COM</a></div>
             </div>
         </div>
 
+        <audio style="display: none;" controls src="./assets/music/chachacha.mp3" id="musicPlayer"></audio>
+        <a class="btn-wsp" target="_blank" id="btn-audio">
+            <i class="fa fa-play" id="iconMusicPlayer"></i>
+        </a>
+
     </div>
-    <audio style="display: none;" controls src="./assets/music/chachacha.mp3" id="musicPlayer" autoplay></audio>
-    <a class="btn-wsp" target="_blank" id="btn-audio">
-        
-	    <i class="fa fa-pause" id="iconMusicPlayer"></i>
-	</a>
-
-
     <!-- jQuery -->
     <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
     <!-- SLIDER -->
@@ -525,23 +394,23 @@
                 navType: 'bubble',
                 transition: 'fade',
                 autoPlay: true,
-                autoPlayDuration: 4000,
-                speed: 1000,
+                autoPlayDuration: 3000,
+                speed: 1500,
                 arrows: false
             });
             $("#weddingcarousel").owlCarousel({
-                items: 4,
+                items: 3,
                 itemsScaleUp: true,
                 navigationText: ["prev", "next"]
             })
         });
     </script>
+    <script type="text/javascript" src="assets/js/loader.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
     <!-- DropDownMenu -->
     <script type="text/javascript" src="assets/js/menu.js"></script>
     <script type="text/javascript" src="assets/js/effects.js"></script>
     <script type="text/javascript" src="assets/js/jquery.arctext.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
     <script type="text/javascript">
         var $ = jQuery.noConflict();
         $(window).load(function () {
@@ -555,9 +424,6 @@
             $titleunder.show().arctext({ radius: 180, dir: -1 });
             $bestman.show().arctext({ radius: 80 });
             $footernames.show().arctext({ radius: 120, dir: -1 });
-
-            $('#defaultCountdown').countdown({ until: new Date(2019, 8 - 1, 9, 12), format: 'y-o-d-h' });
-
         });
     </script>
     <script type="text/javascript">
@@ -565,10 +431,11 @@
         main_menu.init("main_menu", "menuhover");
     </script>
     <script type="text/javascript" src="assets/js/music.js"></script>
-
-    <script type="text/javascript" src="assets/js//reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="text/javascript" src="assets/js//alerts.js"></script>
+    <script type="text/javascript" src="assets/js/http.js"></script>
+    <script type="text/javascript" src="assets/js/slider.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="assets/js/carta.js"></script>
 </body>
 </body>
 
