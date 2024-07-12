@@ -16,7 +16,11 @@ Template Color:	green;
     --light: #d7d677;
 
 
-    /* BLUE */
+    /* EXAMPLE */
+    --regular: #20201D;
+    --darker: #20201D;
+    --light: #20201D;
+
     --regular: #000;
     --darker: #000;
     --light: #000;

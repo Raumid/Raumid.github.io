@@ -11,8 +11,8 @@ btnDownload.addEventListener("click", async function() {
   // doc.addPage("a4", "landscape");
 
   //TRY WITH IMG CANVAS
-  const contentCanvas = await html2canvas(document.getElementById("contenido")
-  ,{
+  const contentCanvas = await html2canvas(document.getElementById("contenido"),
+  {
   //   scrollX:0,
   //   scrollY:0,
     windowWidth: 2000,

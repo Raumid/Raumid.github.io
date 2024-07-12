@@ -3,6 +3,7 @@ let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let dots = document.querySelectorAll('.slider .dots li');
+const interval = 4000;
 
 let lengthItems = items.length - 1;
 let active = 0;
@@ -14,7 +15,7 @@ prev.onclick = function(){
     active = active - 1 >= 0 ? active - 1 : lengthItems;
     reloadSlider();
 }
-let refreshInterval = setInterval(()=> {next.click()}, 3000);
+let refreshInterval = setInterval(()=> {next.click()}, interval);
 function reloadSlider(){
     slider.style.left = -items[active].offsetLeft + 'px';
     // 
@@ -23,7 +24,7 @@ function reloadSlider(){
     dots[active].classList.add('active');
 
     clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000);
+    refreshInterval = setInterval(()=> {next.click()}, interval);
 
     
 }

@@ -73,7 +73,12 @@ async function getData () {
             select.appendChild(newOption);
         });
 
-        select.value = guest.c_totalguest;
+        if(guest.c_totalguest > 2){
+            select.value = guest.c_totalguest - 2;
+        }else {
+            select.value = guest.c_totalguest;
+        }
+        
     } catch (error) {
         console.log("error", error);
     }

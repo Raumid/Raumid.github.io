@@ -21,10 +21,13 @@ const data = {
             const currentDate = new Date();
 
             let experience = currentDate.getFullYear() - init.getFullYear();
+
+            
             if (currentDate.getMonth() < init.getMonth() || 
                 (currentDate.getMonth() === init.getMonth() && currentDate.getDate() < init.getDate())) {
-                age--;
+                experience--;
             }
+            console.log("the expirence", experience);
             return experience;
         },
         contacts: [
