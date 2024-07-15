@@ -796,7 +796,7 @@ a.thumb_read_more:hover{
 /* 5-5. CAROUSEL 	 */
 /*---------------------------*/
 .carousel_container{
-	background:url(assets/images/slider/slide2.jpg) no-repeat center center;
+	/* background:url(assets/images/slider/slide2.jpg) no-repeat center center; */
 	width:100%;
 }
 .carousel_container_image{
@@ -2205,7 +2205,7 @@ span.swirl_right_transparent{
     left: 0;
     top: 0;
     display: flex;
-    transition: 1s;
+    transition: 1.9s;
 }
 .slider .list img{
     width: 1000px;
