@@ -47,12 +47,20 @@
     <main>
         <!-- Hero Carousel Section -->
         <section id="inicio" class="hero">
-            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div id="heroCarousel" style="width: 100%;" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Slides -->
                 <div class="carousel-inner">
                     <!-- Slide 1 -->
-                    <div class="carousel-item active h-100 carousel-item-start">
+                    <div class="carousel-item active">
                         <img src="images/Basslim.jpg" class="d-block w-100" alt="Basslim - Soluciones Industriales">
-                        <div class="carousel-caption">
+                        <div class="carousel-caption d-none d-md-block">
                             <h2>Soluciones Industriales Innovadoras</h2>
                             <p>Excelencia técnica y calidad en cada proyecto</p>
                             <a href="#contacto" class="btn btn-primary">Contáctanos</a>
@@ -60,31 +68,25 @@
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="carousel-item h-100 carousel-item-start">
-                        <img src="images/fabrica2.jpg" class="d-block w-100" alt="Nuestra Fábrica - Basslim">
-                        <div class="carousel-caption">
+                    <!-- <div class="carousel-item">
+                        <img src="images/Basslim.jpg" class="d-block w-100" alt="Nuestra Fábrica - Basslim">
+                        <div class="carousel-caption d-none d-md-block">
                             <h2>Experiencia Industrial</h2>
                             <p>Soluciones a la medida para su negocio</p>
                             <a href="#contacto" class="btn btn-primary">Más información</a>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Slide 3 -->
-                    <div class="carousel-item h-100 carousel-item-start">
-                        <div class="d-flex justify-content-center align-items-center h-100">
-                            <div class="hero-image-container w-100 h-100">
-                                <img src="images/equipo.jpg" class="d-none d-md-block w-100 h-100"
-                                    alt="Nuestro Equipo - Basslim">
-                                <img src="images/BasslimMov.png" class="d-md-none w-100 h-100"
-                                    alt="Nuestro Equipo - Basslim">
-                            </div>
-                            <div class="carousel-caption">
-                                <h2>Equipo Profesional</h2>
-                                <p>Personal altamente calificado</p>
-                                <a href="#quienes-somos" class="btn btn-primary">Conócenos</a>
-                            </div>
+                    <!-- <div class="carousel-item">
+                        <img src="images/equipo.jpg" class="d-block w-100 d-none d-md-block" alt="Nuestro Equipo - Basslim">
+                        <img src="images/BasslimMov.png" class="d-block w-100 d-md-none" alt="Nuestro Equipo - Basslim">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Equipo Profesional</h2>
+                            <p>Personal altamente calificado</p>
+                            <a href="#quienes-somos" class="btn btn-primary">Conócenos</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Carousel Controls -->
@@ -112,7 +114,7 @@
         <!-- About Section -->
         <section id="quienes-somos" class="section">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">¿Quiénes Somos?</h2>
+                <h2 class="section-title">¿Quiénes Somos?</h2>
                 <div class="section-content">
                     <div class="about-content">
                         <div class="about-text animate-on-scroll">
@@ -122,13 +124,13 @@
                                 para asegurar la calidad de nuestros productos.</p>
                         </div>
                         <div class="about-images">
-                            <div class="image-container animate-on-scroll" data-delay="100">
+                            <div class="image-container">
                                 <div class="image-container">
                                     <img src="images/Imagen1.png" alt="Basslim - Nuestra Empresa"
                                         class="img-fluid img-thumbnail">
                                 </div>
                             </div>
-                            <div class="image-container animate-on-scroll" data-delay="200">
+                            <div class="image-container">
                                 <div class="image-container">
                                     <img src="images/Imagen2.png" alt="Equipo de Basslim"
                                         class="img-fluid img-thumbnail">
@@ -141,10 +143,9 @@
         </section>
 
         <!-- Engineering Section -->
-        <!-- Engineering Section -->
         <section id="ingenieria" class="section bg-light">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Ingeniería</h2>
+                <h2 class="section-title">Servicios de Ingeniería</h2>
                 <div class="section-content">
                     <div class="row">
                         <!-- Main Engineering Card -->
@@ -253,11 +254,10 @@
             </div>
         </section>
 
-
         <!-- Troqueles Section -->
-        <section id="troqueles" class="section">
+        <section id="troqueles" class="section" data-aos="fade-up">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Troqueles (Matrices progresivas)</h2>
+                <h2 class="section-title">Troqueles (Matrices progresivas)</h2>
                 <div class="section-content">
                     <div class="about-content">
                         <div class="about-text animate-on-scroll">
@@ -290,13 +290,13 @@
         </section>
 
         <!-- Seguridad Section -->
-        <section id="seguridad" class="section bg-light">
+        <section id="seguridad" class="section bg-light" data-aos="fade-up">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Equipo de Protección y Seguridad Industrial</h2>
+                <h2 class="section-title">Equipo de Protección y Seguridad Industrial</h2>
                 <div class="section-content">
 
                     <!-- Intro -->
-                    <div class="security-intro text-center mb-5 animate-on-scroll">
+                    <div class="security-intro text-center mb-5">
                         <p class="lead">Protección integral para la seguridad de su personal</p>
                         <p>En Basslim ofrecemos una amplia gama de equipos de protección personal (EPP) que cumplen con
                             los más altos estándares de calidad y normativas internacionales. Incluimos soluciones para
@@ -304,7 +304,7 @@
                     </div>
 
                     <!-- Categoría GUANTES -->
-                    <div class="security-category animate-on-scroll" data-delay="100">
+                    <div class="security-category">
                         <div class="category-header text-center mb-4">
                             <div class="category-icon">
                                 <i class="fas fa-shield fa-2x"></i>
@@ -414,9 +414,9 @@
 
 
         <!-- Measurement Section -->
-        <section id="medicion" class="section bg-light">
+        <section id="medicion" class="section" data-aos="fade-up">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Instrumentos de Medición y Control</h2>
+                <h2 class="section-title">Instrumentos de Medición y Control</h2>
                 <div class="section-content">
                     <div class="measurement-intro animate-on-scroll">
                         <p>Ofrecemos una amplia gama de instrumentos de medición de precisión para el control de calidad
@@ -487,14 +487,14 @@
         <!-- Motors Section -->
         <section id="motores" class="section">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Motores y Sistemas de Transmisión</h2>
+                <h2 class="section-title" data-aos="fade-up">Motores y Sistemas de Transmisión</h2>
                 <div class="section-content">
-                    <div class="motors-intro animate-on-scroll">
+                    <div class="motors-intro" data-aos="fade-up" data-aos-delay="100">
                         <p>Reparación y mantenimiento a motores eléctricos.</p>
                     </div>
 
                     <div class="motors-categories">
-                        <div class="category-card animate-on-scroll" data-delay="100">
+                        <div class="category-card" data-aos="zoom-in" data-aos-delay="200">
                             <div class="category-image">
                                 <div class="image-container">
                                     <img src="images/Mantenimiento2.jpg" alt="Motor Trifásico de Alta Eficiencia"
@@ -504,7 +504,7 @@
                         </div>
                     </div>
 
-                    <div class="cta-box animate-on-scroll" data-delay="100">
+                    <div class="cta-box" data-aos="fade-up" data-aos-delay="300">
                         <h3>¿Necesita asesoría en motores eléctricos?</h3>
                         <p>Nuestros ingenieros están disponibles para ayudarle a seleccionar el motor perfecto para su
                             aplicación.</p>
@@ -517,7 +517,7 @@
         <!-- Gallery Section -->
         <section id="productos" class="section bg-light">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Galería de Productos</h2>
+                <h2 class="section-title">Galería de Productos</h2>
                 <div class="row">
 
                     <!-- Galería Item -->
@@ -650,7 +650,7 @@
         <!-- Software Development Section -->
         <section id="software" class="section bg-light">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Desarrollo de Software a la Medida</h2>
+                <h2 class="section-title">Desarrollo de Software a la Medida</h2>
                 <p class="section-subtitle text-center animate-on-scroll" data-delay="100">Soluciones tecnológicas
                     innovadoras para optimizar sus procesos industriales</p>
 
@@ -827,9 +827,9 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contacto" class="section">
+        <section id="contacto" class="section animate-on-scroll">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Contacto</h2>
+                <h2 class="section-title">Contáctanos</h2>
                 <div class="contact-container">
                     <form id="contact-form" class="contact-form animate-on-scroll">
                         <div class="form-group">
@@ -906,13 +906,57 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
+    <!-- ScrollReveal Library -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
     <!-- Custom Scripts -->
     <script src="js/main.js"></script>
-    <script src="js/scroll-animations.js"></script>
+    <script>
+        // Inicializar ScrollReveal
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuración común
+            const defaultConfig = {
+                distance: '50px',
+                duration: 1000,
+                delay: 200,
+                reset: true,
+                easing: 'cubic-bezier(0.5, 0, 0, 1)',
+                viewFactor: 0.1
+            };
+
+            // Inicializar con configuraciones específicas
+            ScrollReveal().reveal('.section-title', {
+                ...defaultConfig,
+                origin: 'top',
+                delay: 100
+            });
+
+            ScrollReveal().reveal('.card', {
+                ...defaultConfig,
+                interval: 200
+            });
+
+            // Configuración para imágenes
+            ScrollReveal().reveal('img', {
+                ...defaultConfig,
+                origin: 'bottom',
+                delay: 300
+            });
+
+            // Configuración para la sección de contacto
+            ScrollReveal().reveal('#contacto .form-control', {
+                ...defaultConfig,
+                origin: 'left',
+                interval: 100
+            });
+        });
+    </script>
     <script>
         // Inicialización del mapa
         function initMap() {
@@ -1029,6 +1073,17 @@
                 interval: 5000, // Change slide every 5 seconds
                 wrap: true,
                 touch: true
+            });
+
+            // Inicializar ScrollReveal para los títulos de sección
+            ScrollReveal().reveal('.section-title', {
+                delay: 450,
+                distance: '120px',
+                origin: 'bottom',
+                duration: 1000,
+                easing: 'cubic-bezier(0.5, 0, 0, 1)',
+                reset: true,
+                viewFactor: 0.1
             });
         });
     </script>
