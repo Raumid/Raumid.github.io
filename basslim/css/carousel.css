@@ -1,0 +1,397 @@
+/* Hero Carousel Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 800px;
+    min-height: 500px;
+    overflow: hidden;
+    background-color: #f8f9fa; /* Fallback background color */
+}
+
+.hero .carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .carousel-inner {
+    height: 100% !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero .carousel-item {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.hero .carousel-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Carousel caption styling */
+.hero .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+    left: 15%;
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero .carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.hero .carousel-caption p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero .carousel-caption .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Carousel controls */
+.hero .carousel-control-prev,
+.hero .carousel-control-next {
+    width: 5%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero:hover .carousel-control-prev,
+.hero:hover .carousel-control-next {
+    opacity: 1;
+}
+
+.hero .carousel-control-prev-icon,
+.hero .carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    background-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.hero .carousel-control-prev:hover .carousel-control-prev-icon,
+.hero .carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Carousel indicators */
+.hero .carousel-indicators {
+    margin-bottom: 2rem;
+}
+
+.hero .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.hero .carousel-indicators .active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .hero .carousel-caption {
+        bottom: 15%;
+        padding: 1.5rem;
+    }
+    
+    .hero .carousel-caption h2 {
+        font-size: 2rem;
+    }
+    
+    .hero .carousel-caption p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero {
+        height: 70vh;
+        min-height: 400px;
+    }
+    
+    .hero .carousel-caption {
+        bottom: 10%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    
+    .hero .carousel-caption h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero .carousel-caption p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero .carousel-caption .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero .carousel-control-prev,
+    .hero .carousel-control-next {
+        display: none;
+    }
+}
+
+.hero .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero .carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero .carousel-caption p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero .carousel-caption .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.hero .carousel-caption .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Carousel Controls */
+.hero .carousel-control-prev,
+.hero .carousel-control-next {
+    width: 5%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero:hover .carousel-control-prev,
+.hero:hover .carousel-control-next {
+    opacity: 1;
+}
+
+.hero .carousel-control-prev-icon,
+.hero .carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    background-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.hero .carousel-control-prev:hover .carousel-control-prev-icon,
+.hero .carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Carousel Indicators */
+.hero .carousel-indicators {
+    margin-bottom: 2rem;
+}
+
+.hero .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.hero .carousel-indicators .active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .hero .carousel-caption {
+        bottom: 15%;
+        padding: 1.5rem;
+    }
+    
+    .hero .carousel-caption h2 {
+        font-size: 2rem;
+    }
+    
+    .hero .carousel-caption p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero .carousel {
+        height: 70vh;
+        min-height: 400px;
+    }
+    
+    .hero .carousel-caption {
+        bottom: 10%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    
+    .hero .carousel-caption h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero .carousel-caption p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero .carousel-caption .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero .carousel-control-prev,
+    .hero .carousel-control-next {
+        display: none;
+    }
+}
+
+/* Animation for carousel captions */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-caption h2,
+.carousel-caption p,
+.carousel-caption .btn {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.carousel-caption p {
+    animation-delay: 0.2s;
+}
+
+.carousel-caption .btn {
+    animation-delay: 0.4s;
+}
+
+/* Ensure images are responsive */
+.carousel-item img {
+    width: 100% !important;
+    height: auto;
+}
+
+/* Fix for carousel height on mobile */
+@media (max-width: 575.98px) {
+    .hero .carousel {
+        height: 60vh;
+        min-height: 300px;
+    }
+    
+    .hero .carousel-caption {
+        bottom: 5%;
+        padding: 0.75rem;
+    }
+    
+    .hero .carousel-caption h2 {
+        font-size: 1.25rem;
+    }
+    
+    .hero .carousel-caption p {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .hero .carousel-caption .btn {
+        padding: 0.4rem 1.25rem;
+        font-size: 0.8rem;
+    }
+}
