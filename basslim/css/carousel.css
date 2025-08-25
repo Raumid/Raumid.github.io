@@ -2,67 +2,68 @@
 .hero {
     position: relative;
     width: 100%;
+    height: 100vh;
     max-height: 800px;
     min-height: 500px;
     overflow: hidden;
     background-color: #f8f9fa; /* Fallback background color */
 }
 
-/* Asegurar que el carrusel ocupe todo el espacio del contenedor */
-.hero .carousel,
-.hero .carousel-inner,
+.hero .carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .carousel-inner {
+    height: 100% !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .hero .carousel-item {
     height: 100%;
-}
-
-/* Estilo para las imágenes del carrusel */
-.hero .carousel-item img {
-    object-fit: cover;
-    height: 100%;
     width: 100%;
+    position: relative;
+    transition: opacity 0.6s ease-in-out;
 }
 
-/* Estilo para los controles del carrusel */
-.hero .carousel-control-prev,
-.hero .carousel-control-next {
-    width: 5%;
-    opacity: 0.8;
+.hero .carousel-item.active {
+    display: block;
+    opacity: 1;
 }
 
-.hero .carousel-control-prev-icon,
-.hero .carousel-control-next-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    background-size: 1.5rem;
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-/* Estilo para los indicadores */
-.hero .carousel-indicators {
-    margin-bottom: 2rem;
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.hero .carousel-indicators [data-bs-target] {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 0 5px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-}
-
-.hero .carousel-indicators .active {
-    background-color: #fff;
-}
-
-/* Estilo para los textos del carrusel */
+/* Carousel caption styling */
 .hero .carousel-caption {
+    position: absolute;
+    right: 15%;
     bottom: 20%;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    left: 15%;
+    padding: 2rem;
+    color: #fff;
     text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 10;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     max-width: 800px;
