@@ -73,22 +73,49 @@ backToTopBtn.addEventListener('click', (e) => {
 
 // Contact form submission
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault(); // Evita el envío tradicional
         
         // Get form data
         const formData = new FormData(this);
-        const formObject = {};
-        formData.forEach((value, key) => {
-            formObject[key] = value;
-        });
         
-        // Here you would typically send the form data to a server
-        console.log('Form submitted:', formObject);
-        
-        // Show success message
-        alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
-        this.reset();
+        try{
+            const response = await fetch("send_mail.php", {
+                method: "POST",
+                body: formData
+            });
+
+            if (response.ok) {
+                const text = await response.text();
+
+                // Detecta si el mensaje fue exitoso
+                if (text.toLowerCase().includes("mensaje enviado") || text.toLowerCase().includes("correctamente")) {
+                    Swal.fire({
+                        title: "¡Mensaje enviado!",
+                        text: "Tu mensaje fue enviado correctamente. Te responderemos pronto.",
+                        icon: "success",
+                        confirmButtonColor: "#3085d6",
+                        confirmButtonText: "Aceptar"
+                    });
+
+                    // Limpia el formulario
+                    this.reset();
+                } else {
+                    throw new Error("Error en la respuesta del servidor.");
+                }
+            } else {
+                throw new Error("Error al enviar el mensaje.");
+            }
+        }
+        catch(error){
+            Swal.fire({
+                title: "Error",
+                text: "No se pudo enviar el mensaje. Inténtalo más tarde.",
+                icon: "error",
+                confirmButtonColor: "#d33",
+                confirmButtonText: "Cerrar"
+            });
+        }
     });
 }
 
