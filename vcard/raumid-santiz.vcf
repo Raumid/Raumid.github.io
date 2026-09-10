@@ -1,0 +1,21 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Santiz Felipe;Raumid de Jesus;;;
+FN:Raumid Santiz
+NICKNAME:Raumid
+TITLE:Software Engineer Full-Stack | .NET & Angular Specialist
+ROLE:Software Engineer
+TEL;TYPE=CELL,VOICE:+528129716686
+EMAIL;TYPE=INTERNET,PREF:raumid98@gmail.com
+ADR;TYPE=WORK:;;;Apodaca;Nuevo León;;México
+LABEL;TYPE=WORK:Apodaca\, Nuevo León\, México
+URL:https://raumid.github.io/portafolio/
+item1.URL:https://www.linkedin.com/in/RaumidSantizFelipe
+item1.X-ABLabel:LinkedIn
+item2.URL:https://github.com/Raumid/
+item2.X-ABLabel:GitHub
+item3.URL:https://www.youtube.com/@RauDev
+item3.X-ABLabel:YouTube
+NOTE:Tarjeta digital: https://raumid.github.io/vcard/
+REV:2026-09-09T00:00:00Z
+END:VCARD

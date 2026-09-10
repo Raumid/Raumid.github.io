@@ -1,0 +1,4 @@
+# El vCard debe conservar los finales de linea CRLF que exige el RFC 6350.
+# Sin esto, core.autocrlf=true los normalizaria a LF al hacer commit y GitHub
+# Pages serviria el archivo asi, lo que rompe algunos importadores de Android.
+*.vcf -text

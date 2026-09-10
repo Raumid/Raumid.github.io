@@ -1,0 +1,480 @@
+/* Tarjeta de presentacion digital - Raumid Santiz
+   Paleta derivada de CV/assets/css/style.css (slate + blue) */
+
+:root {
+    --bg-0: #020617;
+    --bg-1: #0b1220;
+    --bg-2: #0f172a;
+    /* = --color-text-tertiary del CV */
+    --accent: #3b82f6;
+    /* = --color-icons del CV */
+    --accent-soft: #60a5fa;
+
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --line: rgba(255, 255, 255, .12);
+    --surface: rgba(255, 255, 255, .05);
+
+    --card-max: 420px;
+    --radius: 28px;
+    --pad: 24px;
+    /* 48px = minimo tactil accesible (44 iOS / 48dp Android). No bajar de aqui. */
+    --tap: 48px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* El degradado va en html para cubrir SIEMPRE todo el documento, aunque el
+   contenido pase del viewport. Nada de background-attachment:fixed: deja el
+   resto de la pagina sin pintar y iOS Safari lo repinta mal al hacer scroll. */
+html {
+    min-height: 100%;
+    background:
+        radial-gradient(120% 55% at 50% 0%, rgba(59, 130, 246, .28) 0%, transparent 62%),
+        linear-gradient(165deg, var(--bg-2) 0%, var(--bg-1) 55%, var(--bg-0) 100%);
+    background-repeat: no-repeat;
+    /* si el documento es mas corto que la pantalla, el degradado igual llena */
+    background-color: var(--bg-0);
+}
+
+body {
+    min-height: 100vh;
+    /* svh en vez de dvh: no salta al colapsar la barra de Safari */
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    color: var(--text);
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* MOVIL: la tarjeta ES la pantalla, a sangre.
+   env() vale 0 sin viewport-fit=cover, asi que max() degrada al valor fijo. */
+.card {
+    width: 100%;
+    max-width: var(--card-max);
+    min-height: 100svh;
+    padding:
+        max(18px, env(safe-area-inset-top)) var(--pad)
+        max(24px, env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+}
+
+/* ===== Cabecera ===== */
+
+.card-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.wordmark {
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .28em;
+    color: var(--text-muted);
+}
+
+.wordmark span {
+    color: var(--accent);
+}
+
+.btn-share {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    transition: transform .12s ease, background .2s ease;
+}
+
+/* display:grid le gana al [hidden] del navegador: sin esto el boton aparece
+   aunque no haya JS que lo active, y queda muerto. */
+.btn-share[hidden] {
+    display: none;
+}
+
+.btn-share:active {
+    transform: scale(.94);
+}
+
+.btn-share svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+}
+
+/* ===== Identidad ===== */
+
+.photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* el original es 160x145: encuadra el rostro al recortar en circulo */
+    object-position: center 35%;
+    display: block;
+    border: 3px solid var(--accent-soft);
+    box-shadow: 0 0 0 8px rgba(96, 165, 250, .12);
+}
+
+.name {
+    font-size: clamp(1.6rem, 7vw, 2.1rem);
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.15;
+    margin-top: 0;
+}
+
+.role {
+    text-align: center;
+    text-wrap: balance;
+    color: var(--accent-soft);
+    font-size: .84rem;
+    font-weight: 500;
+    line-height: 1.45;
+    margin-top: -10px;
+}
+
+.role span {
+    opacity: .5;
+    margin: 0 2px;
+}
+
+/* ===== Contacto ===== */
+
+.contact {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact a {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    /* toda la fila tocable, no solo el texto */
+    min-height: 40px;
+    padding: 0 6px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: .88rem;
+    font-weight: 300;
+    border-radius: 12px;
+    transition: background .2s ease;
+}
+
+.contact a:active {
+    background: var(--surface);
+}
+
+.contact svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: var(--accent-soft);
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ===== Botones ===== */
+
+.actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: var(--tap);
+    padding: 0 18px;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text);
+    text-decoration: none;
+    font-size: .92rem;
+    font-weight: 500;
+    transition: transform .12s ease, background .2s ease, border-color .2s ease;
+}
+
+.btn:active {
+    transform: scale(.97);
+}
+
+.btn:hover {
+    background: var(--surface);
+    border-color: rgba(255, 255, 255, .22);
+}
+
+.btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    font-weight: 600;
+    box-shadow: 0 10px 24px rgba(59, 130, 246, .32);
+}
+
+.btn-primary:hover {
+    background: #2f76e8;
+    border-color: #2f76e8;
+}
+
+.btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* logos de marca: son paths solidos, no trazos */
+.btn svg.filled {
+    fill: currentColor;
+    stroke: none;
+}
+
+/* ===== Redes: una sola fila ===== */
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 0;
+}
+
+.icon-btn {
+    width: var(--tap);
+    height: var(--tap);
+    display: grid;
+    place-items: center;
+    border: 1.5px solid var(--line);
+    border-radius: 50%;
+    color: var(--text);
+    transition: transform .12s ease, background .2s ease, border-color .2s ease;
+}
+
+.icon-btn svg {
+    width: 21px;
+    height: 21px;
+    fill: currentColor;
+}
+
+.icon-btn:active {
+    transform: scale(.94);
+}
+
+.icon-btn:hover {
+    background: var(--surface);
+    border-color: rgba(255, 255, 255, .22);
+}
+
+.icon-btn.wsp:hover {
+    color: #25d366;
+    border-color: rgba(37, 211, 102, .5);
+}
+
+.icon-btn.yt:hover {
+    color: #ff0000;
+    border-color: rgba(255, 0, 0, .5);
+}
+
+/* ===== QR plegable ===== */
+
+/* Nada de flex aqui: <details> agrupa lo que sigue al <summary> en un
+   contenedor anonimo, asi que align-items no llega al QR. Se centra con
+   text-align + margin auto, que funciona sea cual sea ese agrupamiento. */
+.qr-box {
+    margin-top: auto;
+    padding-top: 6px;
+    width: 100%;
+    text-align: center;
+}
+
+.qr-box summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: .8rem;
+    cursor: pointer;
+    list-style: none;
+    transition: color .2s ease, background .2s ease;
+}
+
+.qr-box summary::-webkit-details-marker {
+    display: none;
+}
+
+.qr-box summary:hover {
+    color: var(--text);
+    background: var(--surface);
+}
+
+.qr-box summary svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+}
+
+.qr-box[open] summary {
+    color: var(--text);
+}
+
+.qr {
+    width: fit-content;
+    margin: 12px auto 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 14px;
+    line-height: 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+}
+
+.qr img {
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+
+/* ===== Toast ===== */
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: max(28px, env(safe-area-inset-bottom));
+    transform: translate(-50%, 12px);
+    padding: 11px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(15, 23, 42, .96);
+    color: var(--text);
+    font-size: .84rem;
+    font-family: inherit;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+    z-index: 50;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* ===== Desktop / moviles grandes: tarjeta flotante ===== */
+
+@media (min-width: 480px) {
+    .card {
+        min-height: auto;
+        margin: 26px 0;
+        padding: 26px var(--pad) 28px;
+        gap: 14px;
+        border-radius: var(--radius);
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+        box-shadow: 0 30px 70px rgba(0, 0, 0, .55);
+    }
+
+    /* Se compacta solo aqui: en movil las alturas tactiles se respetan tal cual,
+       en escritorio se apunta a que la tarjeta quepa entera sin scroll. */
+    .photo img {
+        width: 112px;
+        height: 112px;
+    }
+
+    .contact a {
+        min-height: 42px;
+    }
+
+    .actions {
+        gap: 9px;
+    }
+
+    .btn {
+        min-height: 48px;
+    }
+
+    .qr-box {
+        padding-top: 4px;
+    }
+}
+
+/* Pantallas bajitas (iPhone SE y similares): se comprime lo justo para que la
+   tarjeta siga entrando de un vistazo, sin bajar de 44px tactiles. */
+@media (max-height: 640px) {
+    .card {
+        gap: 8px;
+        --tap: 44px;
+    }
+
+    .photo img {
+        width: 76px;
+        height: 76px;
+        box-shadow: 0 0 0 6px rgba(96, 165, 250, .12);
+    }
+
+    .name {
+        font-size: clamp(1.35rem, 6vw, 1.7rem);
+    }
+
+    .role {
+        font-size: .78rem;
+        margin-top: -6px;
+    }
+
+    .contact a {
+        min-height: 36px;
+    }
+
+    .actions {
+        gap: 8px;
+        margin-top: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
